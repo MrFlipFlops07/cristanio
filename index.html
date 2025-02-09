@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronaldo Siuu Celebration</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+        img {
+            width: 300px;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        video {
+            width: 320px;
+            display: none;
+            margin-top: 20px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cristiano Ronaldo - SIUUU Celebration</h1>
+    
+    <img id="ronaldo-img" src="assets/siuo.jpg" alt="Cristiano Ronaldo Siuu Celebration">
+    
+    <video id="siuu-video" controls>
+        <source src="assets/Cristiano Ronaldo SIUUU!!!.mp4" type="video/mp4">
+
+    </video>
+    
+    <br>
+    <button onclick="playSiuu()">Watch SIUUU</button>
+
+    <script>
+        function playSiuu() {
+            document.getElementById('ronaldo-img').style.display = 'none';
+            let video = document.getElementById('siuu-video');
+            video.style.display = 'block';
+            // Ensure audio plays properly
+            setTimeout(() => {
+                video.muted = false; // Explicitly enable sound
+                video.play();
+            }, 100); // Small delay to prevent browser restrictions
+        }
+
+        
+    </script>
+
+</body>
+</html>
